@@ -1,4 +1,5 @@
 {
   // https://nuxt.com/docs/guide/concepts/typescript
+  "compilerOptions": { "allowJs": true},
   "extends": "./.playground/.nuxt/tsconfig.json"
 }

@@ -1,5 +1,18 @@
 <template>
   <div class="">
+
+    <div class="m-4">
+      <UiDivider text="Componente input" />
+      <div class="my-4">
+        <UiInput v-model="varInput" label="Ingrese un texto por favor (Tema Estandar)" max="40"/>
+      </div>
+      <div class="my-4">
+        <UiInput v-model="varInput" label="Ingrese un texto por favor (Tema Danger)" max="40" theme="danger"/>
+      </div>
+      Valor de la Variable fuera del input "{{ varInput }}"
+    </div>
+
+
     Index page
 
     <UiPre
@@ -66,8 +79,11 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue'; 
   import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/vue/20/solid'
   const [loading, toggleLoading] = useToggle()
+
+  const varInput = ref('Hola quie hace')
   /**
    * WARNING: Index page should not appear on navbar, footer or sidebar
    */
